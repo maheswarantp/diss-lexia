@@ -1,7 +1,7 @@
 # diss-lexia
 FOSSHACK Project
 
-# What are features that help
+### What are features that help
 1. Word Tracker: Automatically show pointer below next word to read (manual prev and next over-ride)
 2. Horizontal line: To show the current line bein
 3. Font changes: 
@@ -19,12 +19,12 @@ FOSSHACK Project
 9. 
 10. Dyslexia Friendliness Scorer
 
-# What are the issues faced by them
+### What are the issues faced by them
 1. Phoentic & Letter Jumping: Phonemes, letters etc get swapped
 2. Movement due to jumping: 
 3. Vertical Jumping: Words jumps vertically
 4. Part of character Observability: See [here](https://danielbritton.info/dyslexia/)
-5. Letters getting rotated: Can be fixed by having bottom heavy font. See (here)[https://edition.cnn.com/2016/03/05/health/dyslexia-simulation/index.html]
+5. Letters getting rotated: Can be fixed by having bottom heavy font. See [here](https://edition.cnn.com/2016/03/05/health/dyslexia-simulation/index.html)
 6. Horizontal Jumping: Words jumps horizontally (very rarely)
 
 
@@ -36,7 +36,7 @@ FOSSHACK Project
 5. HelperBird: 
 
 
-# Research
+### Research
 1. https://www.omoguru.com/omoblog/lexie/improve-skills-friendly-dyslexia-reading-tools/
 2. https://www.bdadyslexia.org.uk/advice/employers/creating-a-dyslexia-friendly-workplace/dyslexia-friendly-style-guide#:~:text=Avoid%20background%20patterns%20or%20pictures,vision%20deficiencies%20(colour%20blindness)
 3. https://www.omoguru.com/lexie/
