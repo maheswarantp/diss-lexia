@@ -1,5 +1,12 @@
 console.log("Diss-lexia extension started !!");
 
+// Global variables for text highlight
+var currentIndexWord = 0
+var spans;
+let errorStrings = ["", "\n", '"', ".", ","]
+let paras;
+
+
 let session = {
   'DyslexicFont': {
     'status': false,
@@ -67,6 +74,9 @@ chrome.runtime.onMessage.addListener(
       // Ruler
       createRuler(session['Ruler']['status'], session['Ruler']['height']);
 
+      // Following text
+      createSpans()
+
       // Line Height
       if (session['LineHeight']['status'])
         applyLineHeight(session['LineHeight']['factor']);
@@ -80,6 +90,39 @@ chrome.runtime.onMessage.addListener(
   }
 );
 
+/* Create Spans for highlight*/
+const createSpans = () => {
+  paras = document.querySelectorAll("p")
+  paras.forEach((para, index) => {
+    para.classList.add(`p-${index}`)
+    words = para.textContent.split(" ")
+    words = words.filter(word => {
+      if(!errorStrings.includes(word))
+        return word
+    })
+    para.innerHTML = words.map((word, index) => `<span id=${index}>${word}</span>`)
+    spans = para.querySelectorAll("p span")
+    spans[currentIndexWord].style.color = "red"
+  })
+}
+
+window.addEventListener('click', (e) => {
+  currentIndexWord = e.target.id
+  // console.log(e.target.parentElement.className);
+  spans = document.querySelectorAll(`.${e.target.parentElement.className} span`)
+  spans.forEach(span => span.style.color = "black")
+  spans[currentIndexWord].style.color = "red"
+})
+
+window.addEventListener('keydown', (e)=>{
+  spans[currentIndexWord].style.color = "black"
+  if(e.keyCode === 37){
+    currentIndexWord = Math.max(0, currentIndexWord - 1)
+  } else if(e.keyCode === 39) {
+    currentIndexWord = parseInt(currentIndexWord) + 1
+  }
+  spans[currentIndexWord].style.color = "red"
+})
 
 /* Font */
 function applyFont(attr, input) {
