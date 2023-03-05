@@ -19,9 +19,6 @@ function speak(selectedText) {
 }
 
 
-
-
-
 toggles.forEach((toggle) => {
 	toggle.addEventListener("change", () => {
 		if (toggle.checked) {
