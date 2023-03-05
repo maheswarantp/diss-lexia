@@ -1,4 +1,5 @@
 # diss-lexia
+
 FOSSHACK Project
 
 ### What are features that help
@@ -15,9 +16,7 @@ FOSSHACK Project
 5. Replace words with onHover images/visual cues
 6. Marked mirror characters (marker on characters to know their orientation)
 7. Increase/Decrease Font Size
-8. 
-9. 
-10. Dyslexia Friendliness Scorer
+8. Dyslexia Friendliness Scorer
 
 ### What are the issues faced by them
 1. Phoentic & Letter Jumping: Phonemes, letters etc get swapped
@@ -33,8 +32,23 @@ FOSSHACK Project
 2. Reviews of other tools: 
 3. Chromevox/ScreenReader
 4. OpenDyslexic: Only changes the font
-5. HelperBird: 
+5. HelperBird: Paid software for advanced features
 
+# Features finished by the end of FOSSHACK 23
+1. Individual Word highlight with movement based on arrow and mouse click
+2. Change font to Dyslexia friendly Open Dyslexic font family along with sizing options
+3. Ruler functionality for ease in tracking
+4. Line Spacing and Line Height adjustment
+5. Text To Speech for highlighted word (HTML5 Depenedency, uses webkitSpeechRecognition API)
+
+# Features to be implemented later on
+- Replacing longer words with simpler shorter synonyms      IMPORTANT
+- Visualize words on mouse hover for ease in comprehension
+- Refactoring of existing code and squashing bugs
+
+# Known Bugs
+- Word highlight is buggy at new paragraphs presented by new <p> tags present in a webpage
+- 
 
 ### Research
 1. https://www.omoguru.com/omoblog/lexie/improve-skills-friendly-dyslexia-reading-tools/
