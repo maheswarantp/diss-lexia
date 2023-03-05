@@ -48,7 +48,13 @@ FOSSHACK Project
 
 # Known Bugs
 - Word highlight is buggy at new paragraphs presented by new <p> tags present in a webpage
-- 
+
+# Installation
+- Download/Clone the repository into some folder
+- Open Chrome and go to extensions and manage extensions
+- Choose developer mode and select load unpacked extension
+- Set the path to the downloaded folder and click ok, the extension is now enabled.
+
 
 ### Research
 1. https://www.omoguru.com/omoblog/lexie/improve-skills-friendly-dyslexia-reading-tools/
